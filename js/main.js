@@ -26,8 +26,8 @@ var user = prompt("pierre, papier ou ciseaux ?");
 }
 
 if (botlife == 3) {
-  console.log("Vous avez perdu");
+  alert("Vous avez perdu !");
 }
 else if (userlife == 3) {
-  console.log("Vous avez gagné");
+  alert("Vous avez gagné !!");
 }
