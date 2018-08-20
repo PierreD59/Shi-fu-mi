@@ -1,10 +1,10 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Final Shifumi</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,34 +20,46 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <img class="background-mobile" src="img/background-mobile.png" alt="photo background version tablette mobile">
   <img class="background-pc" src="img/background-pc.png" alt="photo background">
 
-  <img class="character2" src="img/perso2.gif" alt="gif du perso 2">
-  <img class="character1" src="img/perso1.gif" alt="gif du perso 1">
+  <div id="username-bar" class="username-bar bg-light">
+    <p> Enter your username !</p>
+    <form>
+      <input id="name-searchbar" class="name-searchbar" type="" placeholder="Enter your username" />
+      <input id="username-click" class="button-submit" type="button" value="submit" />
+    </form>
+  </div>
+
+  <img id="character1" src="img/perso1.gif" alt="gif du perso 1">
+  <img id="character2" src="img/perso2.gif" alt="gif du perso 2">
+  <img id="character1-victory" src="img/perso1-victory.gif" alt="gif victoire du perso 1">
+  <img id="character2-victory" src="img/perso2-victory.gif" alt="gif victoire du perso 2">
+
   <div class="info-bar">
     <p id="titleo"> Fight !</p>
   </div>
   <div class="col-12 container character-bar">
     <div class="col-12 row">
       <ul class="col-4 character-name">
+        <li id="username">Cloud</li>
         <li>Sephiroth</li>
-        <li>Cloud</li>
+
       </ul>
       <ul class="col-4 attack">
         <li id="pierre">Pierre</li>
         <li id="papier">Papier</li>
         <li id="ciseaux">Ciseaux</li>
       </ul>
-      <div class="hpname col-4 pl-0 pr-0 pt-1 pb-1">
+
+      <div class="lifebar col-4 pl-0 pr-0 pt-1 pb-1">
         <div class="col-12">
           <div class="progress">
-            <div id="progressbarjoueur" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            <div id="progress-bar-user" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
               3/3 HP
             </div>
           </div>
           <div class="progress mt-2">
-            <div id="progressbarbot" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            <div id="progress-bar-bot" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
               3/3 HP
             </div>
           </div>
@@ -56,29 +68,13 @@
     </div>
   </div>
 
-  <div id="end" class="container bgcolor w-100 m-0 p-0 col-12" style="height: 100vh; position: absolute; z-index: 500000; display: none;">
-  <div class="row col-6 mx-auto bg-light">
-    <div class="textend col-12 text-center">
-      <p class="text-finaly">Vous avez gagné</p>
-      <p class="text-finaly">Vous avez perdu</p>
-    </div>
-    <div class="restart col-12 text-center pt-2 pb-2">
-      <form>
-        <input class="restartcustom" id="restart" class="mt-2" type="button" value="Recommencer"/>
-      </form>
-    </div>
+  <div id="finaly" class="bg-light finaly-bg">
+    <p id="text-finaly" class="text-finaly">Test</p>
+    <input id="restartgame" class="btn btn-primary" type="button" value="Restart">
   </div>
-</div>
-  <!-- <audio class="sound" controls preload autoplay>
-    <source class="victory-sound"src="sound/victoire.mp3" type= "audio/mpeg">
-    <source class="defeat-sound" src="sound/defaite.mp3" type= "audio/mpeg">
-    <source src="sound/combat.mp3" type="audio/mpeg">
-  </audio> -->
-  <audio
-          class="sound"
-          controls
-          src="sound/combat.mp3">
-      </audio>
+
+  <audio class="sound" controls src="sound/combat.mp3">
+  </audio>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

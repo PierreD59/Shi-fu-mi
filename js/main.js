@@ -12,131 +12,182 @@ document.getElementById("papier").onclick = function() {
 document.getElementById("ciseaux").onclick = function() {
   ciseaux()
 };
+document.getElementById("restartgame").onclick = function() {
+  restartgame()
+};
+document.getElementById("username-click").onclick = function() {
+  username()
+};
+
+// Enter your name
+function username() {
+  var test = document.getElementById("name-searchbar").value;
+  if (test.length >= 2) {
+    document.getElementById("username-bar").style.display = "none";
+    document.getElementById("username").innerHTML = test;
+  }
+}
 
 // Function Attack
 function pierre() {
   var ordi = Math.floor(Math.random() * tableau.length);
   if (ordi == 0) {
-    console.log("Egalité !");
-    document.getElementById("titleo").innerHTML = "Egalité";
+    document.getElementById("titleo").innerHTML = "Equality";
   } else if (ordi == 1) {
-    console.log("Perdu !");
     userlife++;
-    document.getElementById("titleo").innerHTML = "Perdu";
+    document.getElementById("titleo").innerHTML = "Wasted !";
   } else if (ordi == 2) {
-    console.log("Gagné !");
     botlife++;
-    document.getElementById("titleo").innerHTML = "Gagné";
+    document.getElementById("titleo").innerHTML = "Win !";
   }
   if (userlife == 1) {
-    document.getElementById("progressbarbot").style.width = "66%";
-    document.getElementById("progressbarbot").innerHTML = "2/3 HP";
+    document.getElementById("progress-bar-bot").style.width = "66%";
+    document.getElementById("progress-bar-bot").innerHTML = "2/3 HP";
   } else if (userlife == 2) {
-    document.getElementById("progressbarbot").style.width = "33%";
-    document.getElementById("progressbarbot").innerHTML = "1/3 HP";
+    document.getElementById("progress-bar-bot").style.width = "33%";
+    document.getElementById("progress-bar-bot").innerHTML = "1/3 HP";
   } else if (userlife == 3) {
-    document.getElementById("progressbarbot").style.width = "0%";
-    document.getElementById("progressbarbot").innerHTML = "";
+    document.getElementById("progress-bar-bot").style.width = "0%";
+    document.getElementById("progress-bar-bot").innerHTML = "COMA";
+    document.getElementById("progress-bar-bot").style.width = "100%";
+    document.getElementById("progress-bar-bot").style.backgroundColor = "gray";
   }
   if (botlife == 1) {
-    document.getElementById("progressbarjoueur").style.width = "66%";
-    document.getElementById("progressbarjoueur").innerHTML = "2/3 HP";
+    document.getElementById("progress-bar-user").style.width = "66%";
+    document.getElementById("progress-bar-user").innerHTML = "2/3 HP";
   } else if (botlife == 2) {
-    document.getElementById("progressbarjoueur").style.width = "33%";
-    document.getElementById("progressbarjoueur").innerHTML = "1/3 HP";
+    document.getElementById("progress-bar-user").style.width = "33%";
+    document.getElementById("progress-bar-user").innerHTML = "1/3 HP";
   } else if (botlife == 3) {
-    document.getElementById("progressbarjoueur").style.width = "0%";
-    document.getElementById("progressbarjoueur").innerHTML = "";
+    document.getElementById("progress-bar-user").style.width = "0%";
+    document.getElementById("progress-bar-user").innerHTML = "COMA";
+    document.getElementById("progress-bar-user").style.width = "100%";
+    document.getElementById("progress-bar-user").style.backgroundColor = "gray";
+  }
+  if (botlife == 3) {
+    document.getElementById('finaly').style.display = "block";
+    document.getElementById("text-finaly").innerHTML = "You win  !";
+    document.getElementById("character1").style.display = "none";
+    document.getElementById("character1-victory").style.display = "block";
+  } else if (userlife == 3) {
+    document.getElementById('finaly').style.display = "block";
+    document.getElementById("text-finaly").innerHTML = "Vous avez gagné !";
+    document.getElementById("character2").style.display = "none";
+    document.getElementById("character2-victory").style.display = "block";
   }
 }
 
 function papier() {
   var ordi = Math.floor(Math.random() * tableau.length);
   if (ordi == 1) {
-    console.log("Egalité !");
-    document.getElementById("titleo").innerHTML = "Egalité";
+    document.getElementById("titleo").innerHTML = "Equality";
   } else if (ordi == 2) {
-    console.log("Perdu !");
     userlife++;
-    document.getElementById("titleo").innerHTML = "Perdu";
+    document.getElementById("titleo").innerHTML = "Wasted !";
   } else if (ordi == 0) {
-    console.log("Gagné !");
     botlife++;
-    document.getElementById("titleo").innerHTML = "Gagné";
+    document.getElementById("titleo").innerHTML = "Win !";
   }
   if (userlife == 1) {
-    document.getElementById("progressbarbot").style.width = "66%";
-    document.getElementById("progressbarbot").innerHTML = "2/3 HP";
+    document.getElementById("progress-bar-bot").style.width = "66%";
+    document.getElementById("progress-bar-bot").innerHTML = "2/3 HP";
   } else if (userlife == 2) {
-    document.getElementById("progressbarbot").style.width = "33%";
-    document.getElementById("progressbarbot").innerHTML = "1/3 HP";
+    document.getElementById("progress-bar-bot").style.width = "33%";
+    document.getElementById("progress-bar-bot").innerHTML = "1/3 HP";
   } else if (userlife == 3) {
-    document.getElementById("progressbarbot").style.width = "0%";
-    document.getElementById("progressbarbot").innerHTML = "";
+    document.getElementById("progress-bar-bot").style.width = "0%";
+    document.getElementById("progress-bar-bot").innerHTML = "COMA";
+    document.getElementById("progress-bar-bot").style.width = "100%";
+    document.getElementById("progress-bar-bot").style.backgroundColor = "gray";
   }
   if (botlife == 1) {
-    document.getElementById("progressbarjoueur").style.width = "66%";
-    document.getElementById("progressbarjoueur").innerHTML = "2/3 HP";
+    document.getElementById("progress-bar-user").style.width = "66%";
+    document.getElementById("progress-bar-user").innerHTML = "2/3 HP";
   } else if (botlife == 2) {
-    document.getElementById("progressbarjoueur").style.width = "33%";
-    document.getElementById("progressbarjoueur").innerHTML = "1/3 HP";
+    document.getElementById("progress-bar-user").style.width = "33%";
+    document.getElementById("progress-bar-user").innerHTML = "1/3 HP";
   } else if (botlife == 3) {
-    document.getElementById("progressbarjoueur").style.width = "0%";
-    document.getElementById("progressbarjoueur").innerHTML = "";
+    document.getElementById("progress-bar-user").style.width = "0%";
+    document.getElementById("progress-bar-user").innerHTML = "COMA";
+    document.getElementById("progress-bar-user").style.width = "100%";
+    document.getElementById("progress-bar-user").style.backgroundColor = "gray";
+  }
+  if (botlife == 3) {
+    document.getElementById('finaly').style.display = "block";
+    document.getElementById("text-finaly").innerHTML = "Vous avez perdu !";
+    document.getElementById("character1").style.display = "none";
+    document.getElementById("character1-victory").style.display = "block";
+  } else if (userlife == 3) {
+    document.getElementById('finaly').style.display = "block";
+    document.getElementById("text-finaly").innerHTML = "Vous avez gagné !";
+    document.getElementById("character2").style.display = "none";
+    document.getElementById("character2-victory").style.display = "block";
   }
 }
 
 function ciseaux() {
   var ordi = Math.floor(Math.random() * tableau.length);
   if (ordi == 2) {
-    console.log("Egalité !");
-    document.getElementById("titleo").innerHTML = "Egalité";
+    document.getElementById("titleo").innerHTML = "Equality";
   } else if (ordi == 0) {
-    console.log("Perdu !");
     userlife++;
-    document.getElementById("titleo").innerHTML = "Perdu";
+    document.getElementById("titleo").innerHTML = "Wasted !";
   } else if (ordi == 1) {
-    console.log("Gagné !");
     botlife++;
-    document.getElementById("titleo").innerHTML = "Gagné";
+    document.getElementById("titleo").innerHTML = "Win !";
   }
   if (userlife == 1) {
-    document.getElementById("progressbarbot").style.width = "66%";
-    document.getElementById("progressbarbot").innerHTML = "2/3 HP";
+    document.getElementById("progress-bar-bot").style.width = "66%";
+    document.getElementById("progress-bar-bot").innerHTML = "2/3 HP";
   } else if (userlife == 2) {
-    document.getElementById("progressbarbot").style.width = "33%";
-    document.getElementById("progressbarbot").innerHTML = "1/3 HP";
+    document.getElementById("progress-bar-bot").style.width = "33%";
+    document.getElementById("progress-bar-bot").innerHTML = "1/3 HP";
   } else if (userlife == 3) {
-    document.getElementById("progressbarbot").style.width = "0%";
-    document.getElementById("progressbarbot").innerHTML = "";
+    document.getElementById("progress-bar-bot").style.width = "0%";
+    document.getElementById("progress-bar-bot").innerHTML = "COMA";
+    document.getElementById("progress-bar-bot").style.width = "100%";
+    document.getElementById("progress-bar-bot").style.backgroundColor = "gray";
   }
   if (botlife == 1) {
-    document.getElementById("progressbarjoueur").style.width = "66%";
-    document.getElementById("progressbarjoueur").innerHTML = "2/3 HP";
+    document.getElementById("progress-bar-user").style.width = "66%";
+    document.getElementById("progress-bar-user").innerHTML = "2/3 HP";
   } else if (botlife == 2) {
-    document.getElementById("progressbarjoueur").style.width = "33%";
-    document.getElementById("progressbarjoueur").innerHTML = "1/3 HP";
+    document.getElementById("progress-bar-user").style.width = "33%";
+    document.getElementById("progress-bar-user").innerHTML = "1/3 HP";
   } else if (botlife == 3) {
-    document.getElementById("progressbarjoueur").style.width = "0%";
-    document.getElementById("progressbarjoueur").innerHTML = "";
+    document.getElementById("progress-bar-user").style.width = "0%";
+    document.getElementById("progress-bar-user").innerHTML = "COMA";
+    document.getElementById("progress-bar-user").style.width = "100%";
+    document.getElementById("progress-bar-user").style.backgroundColor = "gray";
+  }
+  if (botlife == 3) {
+    document.getElementById('finaly').style.display = "block";
+    document.getElementById("text-finaly").innerHTML = "You lose !";
+    document.getElementById("character1").style.display = "none";
+    document.getElementById("character1-victory").style.display = "block";
+  } else if (userlife == 3) {
+    document.getElementById('finaly').style.display = "block";
+    document.getElementById("text-finaly").innerHTML = "You Win !";
+    document.getElementById("character2").style.display = "none";
+    document.getElementById("character2-victory").style.display = "block";
   }
 }
 
-// if (botlife == 3) {
-//   alert("Vous avez perdu !");
-// }
-// else if (userlife == 3) {
-//   alert("Vous avez gagné !!");
-// }
-
-function restartgame(){
-  document.getElementById("end").style.display="none";
+function restartgame() {
+  document.getElementById("finaly").style.display = "none";
   botlife = 0;
   userlife = 0;
-  document.getElementById("progressbarbot").style.width="100%";
-  document.getElementById("progressbarbot").innerHTML="3 vie";
-  document.getElementById("progressbarplayer").style.width="100%";
-  document.getElementById("progressbarplayer").innerHTML="3 vie";
+  document.getElementById("progress-bar-bot").style.width = "100%";
+  document.getElementById("progress-bar-bot").innerHTML = "3/3 HP";
+  document.getElementById("progress-bar-user").style.width = "100%";
+  document.getElementById("progress-bar-user").innerHTML = "3/3 HP";
+  document.getElementById("progress-bar-bot").style.backgroundColor = "red";
+  document.getElementById("progress-bar-user").style.backgroundColor = "red";
+  document.getElementById("character1").style.display = "block";
+  document.getElementById("character1-victory").style.display = "none";
+  document.getElementById("character2").style.display = "block";
+  document.getElementById("character2-victory").style.display = "none";
+  document.getElementById("titleo").innerHTML = "Fight !";
 }
 
 
