@@ -21,8 +21,11 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+
+  <!-- Background -->
   <img class="background-pc" src="img/background-pc.png" alt="photo background">
 
+  <!-- Enter your Name -->
   <div id="username-bar" class="username-bar bg-light">
     <p> Enter your username !</p>
     <form>
@@ -30,23 +33,26 @@
       <input id="username-click" class="button-submit" type="button" value="submit" />
     </form>
   </div>
-
+  <!-- Character -->
   <img id="character1" src="img/perso1.gif" alt="gif du perso 1">
   <img id="character2" src="img/perso2.gif" alt="gif du perso 2">
   <img id="character1-victory" src="img/perso1-victory.gif" alt="gif victoire du perso 1">
   <img id="character2-victory" src="img/perso2-victory.gif" alt="gif victoire du perso 2">
 
+  <!-- Information-bar -->
   <div class="info-bar">
     <p id="title-info"> Fight !</p>
   </div>
+
+    <!-- Caracter's bar with attack and lifebar -->
   <div class="col-12 container character-bar">
     <div class="col-12 row">
+
       <ul class="col-4 character-name">
         <li>Sephiroth</li>
         <li id="username">Cloud</li>
-
-
       </ul>
+
       <ul class="col-4 attack">
         <li id="pierre">Pierre</li>
         <li id="papier">Papier</li>
@@ -65,17 +71,18 @@
               3/3 HP
             </div>
           </div>
-
         </div>
       </div>
+
     </div>
   </div>
-
+  <!-- Finaly div -->
   <div id="finaly" class="bg-light finaly-bg">
     <p id="text-finaly" class="text-finaly">Test</p>
     <input id="restartgame" class="btn btn-primary" type="button" value="Restart">
   </div>
 
+  <!-- Sound block -->
   <audio class="sound" controls src="sound/combat.mp3">
   </audio>
 
