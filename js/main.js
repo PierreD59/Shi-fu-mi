@@ -2,7 +2,7 @@ var tableau = ["pierre", "papier", "ciseaux"];
 var userlife = 0;
 var botlife = 0;
 
-// Attack
+// functions
 document.getElementById("pierre").onclick = function() {
   pierre()
 };
@@ -172,7 +172,7 @@ function ciseaux() {
     document.getElementById("character2-victory").style.display = "block";
   }
 }
-
+// Restart Game
 function restartgame() {
   document.getElementById("finaly").style.display = "none";
   botlife = 0;
@@ -189,29 +189,3 @@ function restartgame() {
   document.getElementById("character2-victory").style.display = "none";
   document.getElementById("title-info").innerHTML = "Fight !";
 }
-
-
-// while (userlife <= 2 && botlife <= 2) {
-//
-// var ordi = Math.floor(Math.random() * tableau.length);
-// var computerChoice = tableau[ordi];
-// // var user = prompt("pierre, papier ou ciseaux ?");
-// //
-//   if (user !== tableau[0] && user !== tableau[1] && user !== tableau[2] ) {
-//   console.log("Entrez une vraie valeur");
-//   }
-//   else if (ordi == 0 && user == tableau[2] || ordi == 1 && user ==tableau[0] || ordi == 2 && user == tableau[1]) {
-//     console.log("Perdu");
-//     userlife--;
-//     // console.log("Ordinateur a " + botlife + " points");
-//   }
-//   else if (ordi == 0 && user == tableau[1] || ordi == 1 && user == tableau[2]|| ordi == 2 && user == tableau[0] ) {
-//     console.log("Gagné !");
-//     botlife--;
-//     // console.log("Vous avez " + userlife + " points");
-//   }
-//   else if (computerChoice == user){
-//     console.log("Egalité");
-//   }
-//
-// }
