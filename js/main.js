@@ -32,13 +32,13 @@ function username() {
 function pierre() {
   var ordi = Math.floor(Math.random() * tableau.length);
   if (ordi == 0) {
-    document.getElementById("titleo").innerHTML = "Equality";
+    document.getElementById("title-info").innerHTML = "Equality";
   } else if (ordi == 1) {
     userlife++;
-    document.getElementById("titleo").innerHTML = "Wasted !";
+    document.getElementById("title-info").innerHTML = "Win !";
   } else if (ordi == 2) {
     botlife++;
-    document.getElementById("titleo").innerHTML = "Win !";
+    document.getElementById("title-info").innerHTML = "Wasted !";
   }
   if (userlife == 1) {
     document.getElementById("progress-bar-bot").style.width = "66%";
@@ -66,12 +66,12 @@ function pierre() {
   }
   if (botlife == 3) {
     document.getElementById('finaly').style.display = "block";
-    document.getElementById("text-finaly").innerHTML = "You win  !";
+    document.getElementById("text-finaly").innerHTML = "You Lose !";
     document.getElementById("character1").style.display = "none";
     document.getElementById("character1-victory").style.display = "block";
   } else if (userlife == 3) {
     document.getElementById('finaly').style.display = "block";
-    document.getElementById("text-finaly").innerHTML = "Vous avez gagné !";
+    document.getElementById("text-finaly").innerHTML = "You Win !";
     document.getElementById("character2").style.display = "none";
     document.getElementById("character2-victory").style.display = "block";
   }
@@ -80,13 +80,13 @@ function pierre() {
 function papier() {
   var ordi = Math.floor(Math.random() * tableau.length);
   if (ordi == 1) {
-    document.getElementById("titleo").innerHTML = "Equality";
+    document.getElementById("title-info").innerHTML = "Equality";
   } else if (ordi == 2) {
     userlife++;
-    document.getElementById("titleo").innerHTML = "Wasted !";
+    document.getElementById("title-info").innerHTML = "Win !";
   } else if (ordi == 0) {
     botlife++;
-    document.getElementById("titleo").innerHTML = "Win !";
+    document.getElementById("title-info").innerHTML = "Wasted !";
   }
   if (userlife == 1) {
     document.getElementById("progress-bar-bot").style.width = "66%";
@@ -114,12 +114,12 @@ function papier() {
   }
   if (botlife == 3) {
     document.getElementById('finaly').style.display = "block";
-    document.getElementById("text-finaly").innerHTML = "Vous avez perdu !";
+    document.getElementById("text-finaly").innerHTML = "You Lose !";
     document.getElementById("character1").style.display = "none";
     document.getElementById("character1-victory").style.display = "block";
   } else if (userlife == 3) {
     document.getElementById('finaly').style.display = "block";
-    document.getElementById("text-finaly").innerHTML = "Vous avez gagné !";
+    document.getElementById("text-finaly").innerHTML = "You Win !";
     document.getElementById("character2").style.display = "none";
     document.getElementById("character2-victory").style.display = "block";
   }
@@ -128,13 +128,13 @@ function papier() {
 function ciseaux() {
   var ordi = Math.floor(Math.random() * tableau.length);
   if (ordi == 2) {
-    document.getElementById("titleo").innerHTML = "Equality";
+    document.getElementById("title-info").innerHTML = "Equality";
   } else if (ordi == 0) {
     userlife++;
-    document.getElementById("titleo").innerHTML = "Wasted !";
+    document.getElementById("title-info").innerHTML = "Win !";
   } else if (ordi == 1) {
     botlife++;
-    document.getElementById("titleo").innerHTML = "Win !";
+    document.getElementById("title-info").innerHTML = "Wasted !";
   }
   if (userlife == 1) {
     document.getElementById("progress-bar-bot").style.width = "66%";
@@ -187,7 +187,7 @@ function restartgame() {
   document.getElementById("character1-victory").style.display = "none";
   document.getElementById("character2").style.display = "block";
   document.getElementById("character2-victory").style.display = "none";
-  document.getElementById("titleo").innerHTML = "Fight !";
+  document.getElementById("title-info").innerHTML = "Fight !";
 }
 
 
